@@ -8,6 +8,12 @@ option = input("Audio or video? (a/v) ")
 path = r"D:\Users\FelipePC\Downloads"
 yt = pytube.YouTube(link)
 
+print("Title:", yt.title)
+print("Author:", yt.author)
+print("Published date:", yt.publish_date.strftime("%Y-%m-%d"))
+print("Number of views:", yt.views)
+print("Length of video:", yt.length, "seconds")
+
 print("Downloading...")
 yt.streams.get_highest_resolution().download(path)
 print("Download completed.")
