@@ -8,7 +8,7 @@ from time import sleep
 while True:
     link = input("Enter the link of the video you want to download: ")
     option = input("Audio or video (a/v)? ")
-    path = r"D:\Users\FelipePC\Downloads"
+    path = os.getcwd()
     yt = pytube.YouTube(link)
 
     print("\nTitle:", yt.title)
